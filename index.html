@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI Final Project</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" onclick="showSection('project-overview')">Project Overview</a>
+        </li>
+        <li>
+          <a href="#" onclick="showSection('assignments')">Assignments</a>
+        </li>
+        <li><a href="#" onclick="showSection('team')">Team</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div id="assignments">
+        <div class="assignments-title">
+          <h1>Dive into Our Assignments and Uncover Insights</h1>
+        </div>
+        <div class="card">
+          <a href="../PDF/Card_Sorting.pdf" target="_blank">
+            <img src="../IMAGES/cardsort.png" alt="Card Sorting Assignment" class="card-image" />
+            <h2>Card Sorting</h2>
+          </a>
+        </div>
+        <div class="card">
+            <a href="../PDF/cognetivewalk.pdf" target="_blank">
+                <img src="../IMAGES/congnitivewalk.png" alt="Cognitive Walkthrough" class="card-image" />
+                <h2>Cognitive Walkthrough</h2>
+            </a>
+        </div>
+    
+        <!-- New Section for User Scenarios -->
+        <div class="card">
+            <a href="../PDF/Scenario_Map.pdf" target="_blank">
+                <img src="../IMAGES/userscenario.png" alt="User Scenarios" class="card-image" />
+                <h2>User Scenarios</h2>
+            </a>
+        </div>
+    
+        <!-- New Section for User Journey -->
+        <div class="card">
+            <a href="../PDF/Journeymap.pdf" target="_blank">
+                <img src="../IMAGES/userjourney.png" alt="User Journey" class="card-image" />
+                <h2>User Journey</h2>
+            </a>
+        </div>
+    
+        <!-- New Section for User Persona -->
+        <div class="card">
+            <a href="../PDF/Userpersona.pdf" target="_blank">
+                <img src="../IMAGES/userpersona.png" alt="User Persona" class="card-image" />
+                <h2>User Persona</h2>
+            </a>
+        </div>
+      </div>
+
+      <div class="team-section" id="team">
+        <h2>Meet Our Team</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>PRN</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abhinav</td>
+                <td>32</td>
+                <td>123456789</td>
+                <!-- Replace with actual PRN -->
+                <td>abhinav@example.com</td>
+                <!-- Replace with actual email -->
+              </tr>
+              <tr>
+                <td>Om</td>
+                <td>3</td>
+                <td>987654321</td>
+                <!-- Replace with actual PRN -->
+                <td>om@example.com</td>
+                <!-- Replace with actual email -->
+              </tr>
+              <tr>
+                <td>Rohit</td>
+                <td>33</td>
+                <td>456123789</td>
+                <!-- Replace with actual PRN -->
+                <td>rohit@example.com</td>
+                <!-- Replace with actual email -->
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div id="project-overview">
+        <h1> Title : Domestic Service Provider Application </h1>
+        <p>
+          Our project aims to develop a user-friendly Domestic Service Provider
+          Application that connects users with verified household service
+          providers.
+        </p>
+        <h2>Key Features:</h2>
+        <ul>
+          <li>User-friendly interface</li>
+          <li>Provider verification process</li>
+          <li>Rating and feedback system</li>
+          <li>Search and filter options</li>
+          <li>Real-time booking system</li>
+          <li>Secure payment integration</li>
+        </ul>
+
+        <h2>Target Users:</h2>
+        <p>The application caters to:</p>
+        <ul>
+          <li>Homeowners seeking reliable services</li>
+          <li>Providers wanting to grow their clientele</li>
+          <li>Families needing urgent assistance</li>
+          <li>New residents looking for local services</li>
+        </ul>
+
+        <h2>Benefits:</h2>
+        <ul>
+          <li>Easy service bookings from the comfort of home</li>
+          <li>Enhanced trust through verified providers</li>
+          <li>Improved communication between users and providers</li>
+          <li>Time-saving for users and providers alike</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 HCI Final Project Team. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto: abhinavtodmal121@gmail.com">abhinavtodmal121@gmail.com</a></p>
+      </footer>
+
+    <script>
+      // Show Assignments by default
+      showSection('assignments');
+
+      function showSection(sectionId) {
+        const sections = ["assignments", "team", "project-overview"];
+        sections.forEach((id) => {
+          document.getElementById(id).style.display =
+            id === sectionId ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>

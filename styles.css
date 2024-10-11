@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 0.8),
+    rgba(0, 255, 255, 0.8)
+  );
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  background-color: #1e3c72;
+  background-image: linear-gradient(147deg, #2f80ed 0%, #56ccf2 100%);
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #183992; /* Light cyan for the line */
+  transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Expands the line from left to right */
+}
+
+nav ul li a:hover {
+  color: #183992; /* Magenta color on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.container {
+  margin-top: 150px; /* Adjusted for fixed navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+.assignments-title {
+  text-align: center;
+  padding: 50px 20px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.assignments-title h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(45deg, #ff6b6b, #f06595, #8fd3f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide-in 0.5s ease forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 25px;
+  margin-left: 210px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  border-color: #8fd3f4;
+  background-color: #f7faff;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #444;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ff6b6b;
+}
+
+#assignments,
+#team,
+#project-overview {
+  display: none;
+}
+
+.team-section,
+#project-overview {
+  margin-top: 50px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+}
+
+.team-section h2,
+#project-overview h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #fffefe;
+  padding: 10px;
+  text-align: center;
+  color: #000000;
+  position: relative; /* Fixed to relative */
+  bottom: 0; /* Omitted with flexbox */
+  width: 100%;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #039fec;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff6b6b;
+}
+
+/* Centering assignments section */
+#assignments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center items vertically */
+}
+
+/* Adding padding to left for the project overview list */
+#project-overview ul {
+  padding-left: 20px; /* Indent the bullet points */
+}
